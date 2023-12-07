@@ -15,8 +15,8 @@ class HeaderWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 210.0),
+          Align(
+            alignment: Alignment.topLeft,
             child: IconButton(
               padding: const EdgeInsets.all(0.0),
               icon: Icon(iconClose, color: Color(0xFF08A652)),

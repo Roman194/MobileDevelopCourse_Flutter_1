@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/header.dart';
+import 'package:flutter_application_1/mainContent.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightGreen),
         ),
-        home: MyHomePage(),
+        home: ProfilePage(),
       ),
     );
   }
@@ -36,7 +37,7 @@ class MyAppState extends ChangeNotifier {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
@@ -60,8 +61,11 @@ class MyHomePage extends StatelessWidget {
             labelStyle: TextStyle(fontFamily: 'SFProText', fontSize: 16.0),
           ),
         ),
-        body: TabBarView(
-          children: [BigCards(pair: pair), BigCards(pair: pair)],
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: TabBarView(
+            children: [MainContentWidget(), BigCards(pair: pair)],
+          ),
         ),
       ),
     );
