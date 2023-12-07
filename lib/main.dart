@@ -43,30 +43,25 @@ class MyHomePage extends StatelessWidget {
     var pair = appState.current;
     IconData icon = Icons.favorite_border;
 
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 44.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            HeaderWidget(),
-            BigCards(pair: pair),
-            SizedBox(height: 20),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                ElevatedButton.icon(
-                    onPressed: () {}, icon: Icon(icon), label: Text('Like')),
-                SizedBox(width: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    appState.getNew();
-                  },
-                  child: Text('Click me'),
-                ),
-              ],
-            )
-          ],
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 225,
+          flexibleSpace: Padding(
+            padding: const EdgeInsets.only(top: 44.0),
+            child: HeaderWidget(),
+          ),
+          bottom: TabBar(
+            tabs: [Tab(text: 'Профиль'), Tab(text: 'Настройки')],
+            indicatorSize: TabBarIndicatorSize.tab,
+            indicatorColor: Color(0xFF068441),
+            labelColor: Colors.black,
+            labelStyle: TextStyle(fontFamily: 'SFProText', fontSize: 16.0),
+          ),
+        ),
+        body: TabBarView(
+          children: [BigCards(pair: pair), BigCards(pair: pair)],
         ),
       ),
     );
@@ -87,12 +82,17 @@ class BigCards extends StatelessWidget {
     final style = theme.textTheme.displayMedium!.copyWith(
       color: theme.colorScheme.onPrimary,
     );
-    return Card(
-      color: theme.colorScheme.primary,
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Text(pair.asLowerCase, style: style),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Card(
+          color: theme.colorScheme.primary,
+          child: Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(pair.asLowerCase, style: style),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -29,13 +29,13 @@ flutter:
   fonts:
     - family: SFProDisplay
       fonts:
-        - asset: lib/fonts/SF-Pro-Display-Bold.otf
+        - asset: fonts/SFProDisplay/SF-Pro-Display-Bold.otf
     - family: SFProText
       fonts:
-        - asset: lib/fonts/SFProText-Bold.ttf
+        - asset: fonts/SFProText/SFProText-Bold.ttf
           weight: 700
-        - asset: lib/fonts/SFProText-Semibold.ttf
+        - asset: fonts/SFProText/SFProText-Semibold.ttf
           weight: 600
-        - asset: lib/fonts/SFProText-Medium.ttf
+        - asset: fonts/SFProText/SFProText-Medium.ttf
 
   
