@@ -23,55 +23,61 @@ class subscribeView extends StatelessWidget {
               BoxShadow(
                   color: Color.fromRGBO(79, 79, 108, 0.07), blurRadius: 14.0)
             ]),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Image(
-                    image: AssetImage('lib/assets/sberPrimeIcon.png'),
-                    width: 36.0,
-                    height: 36.0,
-                  ),
-                  SizedBox(
-                    width: 12.0,
-                  ),
-                  Text(
-                    subscribeCard.serviceName,
-                    style: TextStyle(fontFamily: 'SFProText', fontSize: 16.0),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 22.0,
-              ),
-              Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 2.0),
-                    child: Text(
-                      subscribeCard.paymentDay,
-                      style: TextStyle(
-                        fontFamily: 'SFProText',
-                        fontSize: 14.0,
+        child: InkWell(
+          //Also hower effect doesn't work properly
+          onTap: () {
+            print('Subscribe card was clicked');
+          },
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Image(
+                      image: AssetImage(subscribeCard.serviceIcon),
+                      width: 36.0,
+                      height: 36.0,
+                    ),
+                    SizedBox(
+                      width: 12.0,
+                    ),
+                    Text(
+                      subscribeCard.serviceName,
+                      style: TextStyle(fontFamily: 'SFProText', fontSize: 16.0),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 22.0,
+                ),
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 2.0),
+                      child: Text(
+                        subscribeCard.paymentDay,
+                        style: TextStyle(
+                          fontFamily: 'SFProText',
+                          fontSize: 14.0,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    subscribeCard.paymentPrice,
-                    style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 0.55),
-                        fontFamily: 'SFProText',
-                        fontSize: 14),
-                  ),
-                )
-              ]),
-            ],
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      subscribeCard.paymentPrice,
+                      style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 0.55),
+                          fontFamily: 'SFProText',
+                          fontSize: 14),
+                    ),
+                  )
+                ]),
+              ],
+            ),
           ),
         ),
       ),

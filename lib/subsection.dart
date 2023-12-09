@@ -14,7 +14,7 @@ class subsectionWidget extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'У вас подключено',
+              subInfo.subsection,
               style: TextStyle(
                   fontFamily: 'SFProText',
                   fontSize: 20,
@@ -22,14 +22,17 @@ class subsectionWidget extends StatelessWidget {
             ),
           ),
           SizedBox(height: 8),
-          Text(
-            'Подписки, автоплатежи и сервисы, на которые вы подписались',
-            style: TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.55),
-                fontFamily: 'SFProText',
-                fontSize: 14),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Text(
+              subInfo.subDescription,
+              style: TextStyle(
+                  color: Color.fromRGBO(0, 0, 0, 0.55),
+                  fontFamily: 'SFProText',
+                  fontSize: 14),
+            ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 16),
         ],
       ),
     );

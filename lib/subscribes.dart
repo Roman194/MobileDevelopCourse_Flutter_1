@@ -17,6 +17,7 @@ class SubscribesWidget extends StatelessWidget {
           subsectionWidget(
             subInfo: subsectionData[0],
           ),
+          SizedBox(height: 4.0),
           SizedBox(
             height: 130,
             width: double.infinity,
