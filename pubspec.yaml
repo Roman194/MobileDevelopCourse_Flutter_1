@@ -25,6 +25,8 @@ flutter:
 
   assets:
     - lib/assets/userLogo.png
+    - lib/assets/sberPrimeIcon.png
+    - lib/assets/percentIcon.png
 
   fonts:
     - family: SFProDisplay
