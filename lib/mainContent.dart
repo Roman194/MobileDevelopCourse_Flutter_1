@@ -10,21 +10,24 @@ class MainContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SubscribesWidget(),
-            SizedBox(height: 46.0),
-            ratesWidget(),
-            SizedBox(height: 58.0),
-            interestsWidget(),
-            SizedBox(
-              height: 32.0,
-            )
-          ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: Align(
+          alignment: Alignment.topLeft,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SubscribesWidget(),
+              SizedBox(height: 46.0),
+              ratesWidget(),
+              SizedBox(height: 58.0),
+              interestsWidget(),
+              SizedBox(
+                height: 32.0,
+              )
+            ],
+          ),
         ),
       ),
     );

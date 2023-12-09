@@ -7,26 +7,26 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    IconData iconClose = Icons.close;
-    IconData iconLogOut = Icons.logout;
+    // IconData iconClose = Icons.close;
+    // IconData iconLogOut = Icons.logout;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(14.0, 0.0, 14.0, 14.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: IconButton(
-              padding: const EdgeInsets.all(0.0),
-              icon: Icon(iconClose, color: Color(0xFF08A652)),
-              iconSize: 24.0,
-              onPressed: () {
-                print('IconBackPressed');
-              },
-            ),
-          ),
-          Spacer(),
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 210.0),
+          //   child: IconButton(
+          //     padding: const EdgeInsets.all(0.0),
+          //     icon: Icon(iconClose, color: Color(0xFF08A652)),
+          //     iconSize: 24.0,
+          //     onPressed: () {
+          //       print('IconBackPressed');
+          //     },
+          //   ),
+          // ),
+          // Spacer(),
           Padding(
             padding: const EdgeInsets.only(top: 5.0),
             child: Column(
@@ -44,21 +44,21 @@ class HeaderWidget extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 210.0),
-            child: IconButton(
-              padding: const EdgeInsets.all(0.0),
-              icon: Icon(
-                iconLogOut,
-                color: Color(0xFF08A652),
-              ),
-              iconSize: 24.0,
-              onPressed: () {
-                print('IconLogOutPressed');
-              },
-            ),
-          ),
+          // Spacer(),
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 210.0),
+          //   child: IconButton(
+          //     padding: const EdgeInsets.all(0.0),
+          //     icon: Icon(
+          //       iconLogOut,
+          //       color: Color(0xFF08A652),
+          //     ),
+          //     iconSize: 24.0,
+          //     onPressed: () {
+          //       print('IconLogOutPressed');
+          //     },
+          //   ),
+          // ),
         ],
       ),
     );
