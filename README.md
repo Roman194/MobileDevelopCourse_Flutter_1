@@ -9,6 +9,12 @@ Project was made with:
 - DevTools: 2.28.3
 - Dart: 3.2.2
 
+### Supported platform
+- Android
+  
+Attention! The projects after downloading needs to upload some files. Click on notifications and click on "Pub get" button.
+Remember! Project was made for android, so it will looks properly only with android emulator or real device.
+
 You can see screenshots with result here:
 
 ![Screenshot_1702186126](https://github.com/Roman194/MobileDevelopCourse_Flutter_1/assets/66479764/d1962e83-8409-47be-869c-e7f67c73ae52)
