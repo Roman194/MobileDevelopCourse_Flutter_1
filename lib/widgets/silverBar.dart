@@ -3,7 +3,7 @@ import 'package:flutter_application_1/constants/colors.dart';
 import 'package:flutter_application_1/constants/fonts.dart';
 import 'package:flutter_application_1/constants/numerals.dart';
 import 'package:flutter_application_1/constants/texts.dart';
-import 'package:flutter_application_1/header.dart';
+import 'package:flutter_application_1/widgets/header.dart';
 
 class silverBarWidget extends StatelessWidget {
   const silverBarWidget({

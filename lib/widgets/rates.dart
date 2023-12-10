@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/colors.dart';
 import 'package:flutter_application_1/constants/numerals.dart';
-import 'package:flutter_application_1/rate.dart';
-import 'package:flutter_application_1/subsection.dart';
+import 'package:flutter_application_1/widgets/rate.dart';
+import 'package:flutter_application_1/widgets/subsection.dart';
 import 'package:flutter_application_1/viewmodels/testData.dart';
 
 class ratesWidget extends StatelessWidget {

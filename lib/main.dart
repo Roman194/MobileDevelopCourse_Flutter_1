@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/colors.dart';
 import 'package:flutter_application_1/mainContent.dart';
 import 'package:flutter_application_1/settings.dart';
-import 'package:flutter_application_1/silverBar.dart';
+import 'package:flutter_application_1/widgets/silverBar.dart';
 
 void main() {
   runApp(MyApp());

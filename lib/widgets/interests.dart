@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/numerals.dart';
-import 'package:flutter_application_1/interest.dart';
-import 'package:flutter_application_1/subsection.dart';
+import 'package:flutter_application_1/widgets/interest.dart';
+import 'package:flutter_application_1/widgets/subsection.dart';
 import 'package:flutter_application_1/viewmodels/testData.dart';
 
 class interestsWidget extends StatelessWidget {

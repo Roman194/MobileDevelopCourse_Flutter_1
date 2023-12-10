@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/numerals.dart';
-import 'package:flutter_application_1/interests.dart';
-import 'package:flutter_application_1/rates.dart';
-import 'package:flutter_application_1/subscribes.dart';
+import 'package:flutter_application_1/widgets/interests.dart';
+import 'package:flutter_application_1/widgets/rates.dart';
+import 'package:flutter_application_1/widgets/subscribes.dart';
 
 class MainContentWidget extends StatelessWidget {
   const MainContentWidget({
