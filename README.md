@@ -9,7 +9,8 @@ Project was made with:
 - DevTools: 2.28.3
 - Dart: 3.2.2
 
-You can see scrinshots with result here:
+You can see screenshots with result here:
+
 ![Screenshot_1702186126](https://github.com/Roman194/MobileDevelopCourse_Flutter_1/assets/66479764/d1962e83-8409-47be-869c-e7f67c73ae52)
 
 ![Screenshot_1702186141](https://github.com/Roman194/MobileDevelopCourse_Flutter_1/assets/66479764/e642b8f4-2f5f-4e4c-b876-cb2761b764a2)
