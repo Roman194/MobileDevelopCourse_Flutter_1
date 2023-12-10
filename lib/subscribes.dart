@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
 import 'package:flutter_application_1/subscribe.dart';
 import 'package:flutter_application_1/subsection.dart';
 import 'package:flutter_application_1/viewmodels/testData.dart';
@@ -11,22 +12,22 @@ class SubscribesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 30.0),
+      padding: const EdgeInsets.only(top: beforeSubscribesPadding),
       child: Column(
         children: [
           subsectionWidget(
             subInfo: subsectionData[0],
           ),
-          SizedBox(height: 4.0),
+          SizedBox(height: afterSubsectionSubscribesPadding),
           SizedBox(
-            height: 130,
+            height: subscribesHegiht,
             width: double.infinity,
             child: ListView.separated(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               separatorBuilder: (context, index) {
                 return SizedBox(
-                  width: 8.0,
+                  width: spaceBetweenSubscribes,
                 );
               },
               itemCount: subscribeCardData.length,

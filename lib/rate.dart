@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/fonts.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
+import 'package:flutter_application_1/constants/texts.dart';
 import 'package:flutter_application_1/viewmodels/models/ratesCard.dart';
 
 class rateWidget extends StatelessWidget {
@@ -8,44 +11,40 @@ class rateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 8.0),
+      padding: const EdgeInsets.only(right: rateRightPadding),
       child: InkWell(
         onTap: () {
-          print('Rate was clicked');
+          print(onRateClick);
         },
         child: Row(
           children: [
             Image(
               image: AssetImage('lib/assets/ratesIcon.png'),
-              width: 36.0,
-              height: 36.0,
+              width: rateIconSize,
+              height: rateIconSize,
             ),
-            SizedBox(width: 12.0),
+            SizedBox(width: sizedBoxAfterRateIcon),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Align(
+                  //This aling on the text doesn't work. In other classes align works perfectly. I don't know how to fix this
                   alignment: Alignment.topLeft,
-                  child: Text(ratesCard.ratesName,
-                      style:
-                          TextStyle(fontFamily: 'SFProText', fontSize: 16.0)),
+                  child: Text(ratesCard.ratesName, style: secondaryTextStyle),
                 ),
-                SizedBox(height: 2.0),
+                SizedBox(height: sizedBoxAfterRateMainText),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(ratesCard.ratesDescription,
-                      style: TextStyle(
-                          color: Color.fromRGBO(0, 0, 0, 0.55),
-                          fontFamily: 'SFProText',
-                          fontSize: 14)),
+                      style: backgroundColorTextStyle),
                 ),
               ],
             ),
             Spacer(),
             Image(
               image: AssetImage('lib/assets/disclosure.png'),
-              width: 24.0,
-              height: 24.0,
+              width: disclosureIconSize,
+              height: disclosureIconSize,
             ),
           ],
         ),

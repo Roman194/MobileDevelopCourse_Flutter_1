@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
 import 'package:flutter_application_1/interests.dart';
 import 'package:flutter_application_1/rates.dart';
 import 'package:flutter_application_1/subscribes.dart';
@@ -19,12 +20,12 @@ class MainContentWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SubscribesWidget(),
-              SizedBox(height: 46.0),
+              SizedBox(height: sizedBoxAfterSubscribes),
               ratesWidget(),
-              SizedBox(height: 58.0),
+              SizedBox(height: sizedBoxAfterRates),
               interestsWidget(),
               SizedBox(
-                height: 32.0,
+                height: sizedBoxAfterInterests,
               )
             ],
           ),

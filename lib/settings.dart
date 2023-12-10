@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/texts.dart';
 
 class settingsWidget extends StatelessWidget {
   const settingsWidget({
@@ -7,6 +8,6 @@ class settingsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Settings page'));
+    return Center(child: Text(settingsText));
   }
 }

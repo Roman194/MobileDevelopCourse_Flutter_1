@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/fonts.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
 import 'package:flutter_application_1/viewmodels/models/SubsectionModel.dart';
 
 class subsectionWidget extends StatelessWidget {
@@ -8,31 +10,25 @@ class subsectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 16.0),
+      padding: const EdgeInsets.only(right: subsectionsPadding),
       child: Column(
         children: [
           Align(
             alignment: Alignment.topLeft,
             child: Text(
               subInfo.subsection,
-              style: TextStyle(
-                  fontFamily: 'SFProText',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700),
+              style: subsectionTextStyle,
             ),
           ),
-          SizedBox(height: 8),
+          SizedBox(height: sizedBoxAfterSubsection),
           Align(
             alignment: Alignment.bottomLeft,
             child: Text(
               subInfo.subDescription,
-              style: TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, 0.55),
-                  fontFamily: 'SFProText',
-                  fontSize: 14),
+              style: subsectionSecondaryTextStyle,
             ),
           ),
-          SizedBox(height: 16),
+          SizedBox(height: sizedBoxAfterSubsectionDescription),
         ],
       ),
     );

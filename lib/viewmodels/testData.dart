@@ -35,3 +35,5 @@ List<InterestCard> interestData = [
   InterestCard('Забота o ce6e'),
   InterestCard('Наука')
 ];
+
+const String userName = 'Екатерина';

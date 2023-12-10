@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/colors.dart';
+import 'package:flutter_application_1/constants/fonts.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
+import 'package:flutter_application_1/constants/texts.dart';
 import 'package:flutter_application_1/viewmodels/models/SubscribeCard.dart';
 
 class subscribeView extends StatelessWidget {
@@ -16,65 +20,58 @@ class subscribeView extends StatelessWidget {
       child: DecoratedBox(
         position: DecorationPosition.background,
         decoration: BoxDecoration(
-            color: const Color(0xFFFFFFFF),
-            borderRadius: BorderRadius.all(Radius.circular(12.0)),
+            color: subscribeCardBackground,
+            borderRadius:
+                BorderRadius.all(Radius.circular(subscribeCardRadius)),
             boxShadow: [
-              BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 10.0),
               BoxShadow(
-                  color: Color.fromRGBO(79, 79, 108, 0.07), blurRadius: 14.0)
+                  color: firstBoxShadow, blurRadius: subscribeCardShadowOne),
+              BoxShadow(
+                  color: secondBoxShadow, blurRadius: subscribeCardShadowTwo)
             ]),
         child: InkWell(
-          //Also hower effect doesn't work properly
+          //Also hower effect doesn't work properly too
           onTap: () {
-            print('Subscribe card was clicked');
+            print(onSubscribeCardClick);
           },
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(subscribeCardPadding),
             child: Column(
               children: [
                 Row(
                   children: [
                     Image(
                       image: AssetImage(subscribeCard.serviceIcon),
-                      width: 36.0,
-                      height: 36.0,
+                      width: subscribeCardIconSize,
+                      height: subscribeCardIconSize,
                     ),
                     SizedBox(
-                      width: 12.0,
+                      width: sizedBoxAfterSubscribeCardIcon,
                     ),
                     Text(
                       subscribeCard.serviceName,
-                      style: TextStyle(fontFamily: 'SFProText', fontSize: 16.0),
+                      style: secondaryTextStyle,
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 22.0,
+                  height: sizedBoxAfterSubscribeCardMainText,
                 ),
                 Column(mainAxisAlignment: MainAxisAlignment.start, children: [
                   Align(
                     alignment: Alignment.topLeft,
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 2.0),
-                      child: Text(
-                        subscribeCard.paymentDay,
-                        style: TextStyle(
-                          fontFamily: 'SFProText',
-                          fontSize: 14.0,
-                        ),
-                      ),
+                      padding: const EdgeInsets.only(
+                          left: subscribeCardBeforeMainTextPadding),
+                      child: Text(subscribeCard.paymentDay,
+                          style: backgroundTextStyle),
                     ),
                   ),
                   Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                      subscribeCard.paymentPrice,
-                      style: TextStyle(
-                          color: Color.fromRGBO(0, 0, 0, 0.55),
-                          fontFamily: 'SFProText',
-                          fontSize: 14),
-                    ),
-                  )
+                    child: Text(subscribeCard.paymentPrice,
+                        style: backgroundColorTextStyle),
+                  ),
                 ]),
               ],
             ),

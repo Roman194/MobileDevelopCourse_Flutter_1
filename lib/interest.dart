@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/colors.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
+import 'package:flutter_application_1/constants/texts.dart';
 import 'package:flutter_application_1/viewmodels/models/interestCard.dart';
 
 class interestWidget extends StatelessWidget {
@@ -11,14 +14,15 @@ class interestWidget extends StatelessWidget {
       children: [
         InkWell(
           onTap: () {
-            print('Interest was clicked');
+            print(onInterestClick);
           },
           child: Chip(
-            backgroundColor: Color.fromRGBO(0, 0, 0, 0.08),
-            padding: EdgeInsets.symmetric(vertical: 7.0),
+            backgroundColor: chipBackgroundColor,
+            padding: EdgeInsets.symmetric(vertical: paddingIncideInterestChips),
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                side: BorderSide(color: Color.fromRGBO(0, 0, 0, 0.00))),
+                borderRadius: BorderRadius.all(
+                    Radius.circular(borderRadiusInterestChips)),
+                side: BorderSide(color: chipBorderColor)),
             label: Text(interestCard.interest),
           ),
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/numerals.dart';
 import 'package:flutter_application_1/interest.dart';
 import 'package:flutter_application_1/subsection.dart';
 import 'package:flutter_application_1/viewmodels/testData.dart';
@@ -16,7 +17,7 @@ class interestsWidget extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: Wrap(
-            spacing: 8.0,
+            spacing: spaceBetweenInterestChips,
             children: [
               for (int index = 0; index < interestData.length; index++)
                 interestWidget(interestCard: interestData[index])
